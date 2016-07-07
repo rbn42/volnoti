@@ -1,8 +1,8 @@
-<RCC>
-    <qresource prefix="/">
-        <file>main.qml</file>
-    </qresource>
-    <qresource prefix="/res/">
-        <file>res/progressbar_full.png</file>
-    </qresource>
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>main.qml</file>
+    <file>../res/progressbar_full.png</file>
+    <file>../res/progressbar_empty.png</file>
+    <file>../res/volume_off.png</file>
+</qresource>
 </RCC>
