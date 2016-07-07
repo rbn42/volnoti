@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+    </qresource>
+    <qresource prefix="/res/">
+        <file>res/progressbar_full.png</file>
+    </qresource>
+</RCC>
