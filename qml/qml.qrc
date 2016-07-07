@@ -4,5 +4,9 @@
     <file>../res/progressbar_full.png</file>
     <file>../res/progressbar_empty.png</file>
     <file>../res/volume_off.png</file>
+    <file>../res/volume_low.png</file>
+    <file>../res/volume_high.png</file>
+    <file>../res/volume_muted.png</file>
+    <file>../res/volume_medium.png</file>
 </qresource>
 </RCC>

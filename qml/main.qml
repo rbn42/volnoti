@@ -1,22 +1,34 @@
-import QtQuick 2.0
-import QtQuick.Controls 1.1
+import QtQuick 2.5
+import QtQuick.Window 2.2
 
-ApplicationWindow {
+Window {
+    visible: true
     id:root
-    width:150
+    width:100
     height:root.width*1.06
     x:10
     y:10
     color:'transparent' 
+    flags: Qt.BypassWindowManagerHint
     //flags: Qt.SplashScreen
     //flags: Qt.FramelessWindowHint
-    flags: Qt.BypassWindowManagerHint
+    
+    Timer {
+        interval: 3000; running: true; 
+        onTriggered: Qt.quit()
+    }
+
+    Rectangle {
+        width:root.width
+        height:root.height
+        opacity:0.03
+        color:"#ffffff"
+    }
 
     Image {
         id:img
         width:root.width
         height:root.width
-     //   source: "../res/volume_low.png"
     }
 
     Image {
@@ -29,7 +41,6 @@ ApplicationWindow {
     Item{
         id:vol_full
         anchors.top:img.bottom
-    //    width:root.width
         height:root.height-root.width
         clip:true
         Image {
@@ -39,15 +50,10 @@ ApplicationWindow {
         }
     }
 
-    Timer {
-        interval: 3000; running: true; 
-        onTriggered: Qt.quit()
-    }
-
     Component.onCompleted:{
         var muted=false;
         var vol=-1
-        for(var i=1;i<Qt.application.arguments.length-1;i++){
+        for(var i=1;i<Qt.application.arguments.length;i++){
             var s=Qt.application.arguments[i] 
             if(s=='-m')
                 muted=true;
